@@ -80,12 +80,8 @@ a:hover{
     font-size: 30px;
 }
 
-.page{
-    margin: 30px 0;
-    font-size: 24px;
-}
-
 .page a{
+    font-size: 24px;
     text-decoration: none;
     color: #ff8800;
 }
@@ -98,3 +94,40 @@ a:hover{
 .copy{
     font-size: small;
 }
+
+.bio{
+    max-width: 45%;
+    font-size: 18px;
+    text-align: left;
+    margin: 25px 0;
+}
+
+.bio a{
+    text-decoration: none;
+    color:#ff8800;
+    padding: 0px;
+}
+
+.bio a:hover{
+    color:#0077FF;
+    transition-duration: 0.5s;
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 22px;
+    color: #ff8800;
+}
+
+.nav a:hover{
+    color: #0077FF;
+    transition-duration: 0.3s;
+}
+
+/* #proj + p{
+    opacity: 0;
+}
+
+#proj:hover + p{
+    opacity: 100;
+} */
