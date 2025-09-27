@@ -26,6 +26,8 @@ a:hover{
 .row{
     justify-content: center;
     align-items: center;
+    /* Add position relative to contain absolute positioning */
+    position: relative;
 }
 
 .row .row a{
@@ -43,23 +45,25 @@ a:hover{
     color: #ff8800;
 }
 
-#github2, #linkedin2, #email2, #spotify2{
+#github2, #linkedin2, #email2, #resume2{
     display: none
 }
 
-
-#github:hover ~ .row #github2, #linkedin:hover ~ .row #linkedin2, #email:hover ~ .row #email2, #spotify:hover ~ .row #spotify2, 
-#github2:hover, #linkedin2:hover, #email2:hover, #spotify2:hover{
+#github:hover ~ .row #github2, #linkedin:hover ~ .row #linkedin2, #email:hover ~ .row #email2, #resume:hover ~ .row #resume2, 
+#github2:hover, #linkedin2:hover, #email2:hover, #resume2:hover{
     display: block;
-    height:25px;
+    height: 25px;
     width: fit-content;
     background-color: white;
-    color:#0077FF;
+    color: #0077FF;
     overflow: hidden;
+    position: absolute;
+    top: 0px; 
+    z-index: 10;
 }
 
-
 .portrait{
+    height: auto;
     max-width: 250px;
     border: 2px solid white;
     margin: 25px;
@@ -90,7 +94,6 @@ a:hover{
 .page a:hover{
     color: #0077FF;
 }
-
 
 .copy{
     font-size: small;
@@ -124,11 +127,3 @@ a:hover{
     color: #0077FF;
     transition-duration: 0.3s;
 }
-
-/* #proj + p{
-    opacity: 0;
-}
-
-#proj:hover + p{
-    opacity: 100;
-} */

@@ -1,3 +1,5 @@
 # jake-lee630.github.io
 Personal website
----------Work in progress---------
+
+contact     >   jake.lee@rice.edu
+linkedin    >   https://www.linkedin.com/in/jake-lee630/
