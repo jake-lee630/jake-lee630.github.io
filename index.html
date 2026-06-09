@@ -11,6 +11,22 @@
         <title>Jake Lee</title>
     </head>
     <body>
+        <div id="navbar"></div>
+        <script>
+        fetch('./navbar.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+
+            const current = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-bar a').forEach(link => {
+            if (link.getAttribute('href') === `./${current}`) {
+                link.classList.add('active');
+            }
+            });
+        });
+        </script>
+
         <div class="container">
             <a href="./about"><img class="portrait rounded" src="./resources/images/jake3.jpg" alt="Jake"></a>
 
@@ -43,6 +59,12 @@
 
         </div>
         
+        <div id="footer"></div>
+        <script>
+        fetch('./footer.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('footer').innerHTML = html);
+        </script>
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

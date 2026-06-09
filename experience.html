@@ -10,21 +10,6 @@
         <title>Jake Lee</title>
     </head>
     <body>
-        <div id="navbar"></div>
-        <script>
-        fetch('./navbar.html')
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById('navbar').innerHTML = html;
-
-            const current = window.location.pathname.split('/').pop();
-            document.querySelectorAll('.nav-bar a').forEach(link => {
-            if (link.getAttribute('href') === `./${current}`) {
-                link.classList.add('active');
-            }
-            });
-        });
-        </script>
         <div class="container">
             <div class="row">
                 <ul class="nav">

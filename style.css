@@ -1,129 +1,247 @@
 @font-face {
-    font-family: "Space Mono";
-    src: url('resources/Space_Mono/SpaceMono-Regular.ttf') format('truetype'),
-    url('resources/Space_Mono/SpaceMono-Bold.ttf') format('truetype'), 
-    url('resources/Space_Mono/SpaceMono-Italic.ttf') format('truetype'),
-    url('resources/Space_Mono/SpaceMono-BoldItalic.ttf') format('truetype');
+  font-family: "Space Mono";
+  src:
+    url("resources/Space_Mono/SpaceMono-Regular.ttf") format("truetype"),
+    url("resources/Space_Mono/SpaceMono-Bold.ttf") format("truetype"),
+    url("resources/Space_Mono/SpaceMono-Italic.ttf") format("truetype"),
+    url("resources/Space_Mono/SpaceMono-BoldItalic.ttf") format("truetype");
 }
 
-body{
-    font-family: "Space Mono", monospace, sans-serif;
-    background-color: #232323;
-    text-align: center;
-    color: #fff
+body {
+  font-family: "Space Mono", monospace, sans-serif;
+  background-color: #232323;
+  text-align: center;
+  color: #fff;
+  padding: 7vh 5vw 0vh 5vw;
+  width: 60vw;
+  justify-self: center;
 }
 
-a:hover{
-    transition-duration: 0.5s;
+a:hover {
+  transition-duration: 0.5s;
 }
 
-.container{
-    padding-top: 5%;
-    justify-content: center;
-    align-items: center;
+.container {
+  padding-top: 5%;
+  justify-content: center;
+  align-items: center;
 }
 
-.row{
-    justify-content: center;
-    align-items: center;
-    /* Add position relative to contain absolute positioning */
-    position: relative;
+.row {
+  justify-content: center;
+  align-items: center;
+  /* Add position relative to contain absolute positioning */
+  position: relative;
 }
 
-.row .row a{
-    text-decoration: none;
-    align-self: center;
+.row .row a {
+  text-decoration: none;
+  align-self: center;
 }
 
-.col-sm-1 a{
-    text-decoration: none;
-    color: #fff;
+.col-sm-1 a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.col-sm-1 a:hover{
-    text-decoration: none;
-    color: #ff8800;
+.col-sm-1 a:hover {
+  text-decoration: none;
+  color: #ff8800;
 }
 
-#github2, #linkedin2, #email2, #resume2{
-    display: none
+#github2,
+#linkedin2,
+#email2,
+#resume2 {
+  display: none;
 }
 
-#github:hover ~ .row #github2, #linkedin:hover ~ .row #linkedin2, #email:hover ~ .row #email2, #resume:hover ~ .row #resume2, 
-#github2:hover, #linkedin2:hover, #email2:hover, #resume2:hover{
-    display: block;
-    height: 25px;
-    width: fit-content;
-    background-color: white;
-    color: #0077FF;
-    overflow: hidden;
-    position: absolute;
-    top: 0px; 
-    z-index: 10;
+#github:hover ~ .row #github2,
+#linkedin:hover ~ .row #linkedin2,
+#email:hover ~ .row #email2,
+#resume:hover ~ .row #resume2,
+#github2:hover,
+#linkedin2:hover,
+#email2:hover,
+#resume2:hover {
+  display: block;
+  height: 25px;
+  width: fit-content;
+  background-color: white;
+  color: #0077ff;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  z-index: 10;
 }
 
-.portrait{
-    height: auto;
-    max-width: 250px;
-    border: 2px solid white;
-    margin: 25px;
+.portrait {
+  height: auto;
+  max-width: 250px;
+  border: 2px solid white;
+  margin: 25px;
 }
 
-.name{
-    font-size: 48px;
-    padding: 0px;
-    margin-bottom: 20px;
+.name {
+  font-size: 48px;
+  padding: 0px;
+  margin-bottom: 20px;
 }
 
-.description{
-    font-size: 24px;
-    color: #919191;
-    margin-bottom: 30px;
+.description {
+  font-size: 24px;
+  color: #919191;
+  margin-bottom: 30px;
 }
 
-.bi{
-    font-size: 24px;
+.bi {
+  font-size: 24px;
 }
 
-.page a{
-    font-size: 24px;
-    text-decoration: none;
-    color: #ff8800;
+.page a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #ff8800;
 }
 
-.page a:hover{
-    color: #0077FF;
+.page a:hover {
+  color: #0077ff;
 }
 
-.copy{
-    font-size: small;
+.copy {
+  font-size: small;
 }
 
-.bio{
-    max-width: 500px;
-    font-size: 18px;
-    text-align: left;
-    margin: 25px 0;
+.bio {
+  max-width: 500px;
+  font-size: 18px;
+  text-align: left;
+  margin: 25px 0;
 }
 
-.bio a{
-    text-decoration: none;
-    color:#ff8800;
-    padding: 0px;
+.bio a {
+  text-decoration: none;
+  color: #ff8800;
+  padding: 0px;
 }
 
-.bio a:hover{
-    color:#0077FF;
-    transition-duration: 0.5s;
+.bio a:hover {
+  color: #0077ff;
+  transition-duration: 0.5s;
 }
 
-.nav a{
-    text-decoration: none;
-    font-size: 22px;
-    color: #ff8800;
+.nav a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #ff8800;
 }
 
-.nav a:hover{
-    color: #0077FF;
-    transition-duration: 0.3s;
+.nav a:hover {
+  color: #0077ff;
+  transition-duration: 0.3s;
+}
+
+/* header/navbar styling */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff8800;
+  text-decoration: none;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  align-items: flex-end;
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav-bar li {
+  border-bottom: 1px solid transparent;
+}
+
+.nav-bar li:hover {
+  border-bottom: 1px solid #ff8800;
+  color: #ff8800;
+}
+
+.nav-bar a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav-bar a.active {
+  color: #ff8800;
+}
+
+.nav-bar li:last-child {
+  margin-top: 6 px;
+}
+
+.bi-file-earmark-person {
+  font-size: 16px;
+}
+
+/* footer styling */
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 0px 30px 0px;
+}
+
+.copy {
+  font-size: 12px;
+}
+
+.footlinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.footlinks li {
+  margin: 0px 10px;
+  border-bottom: 1px solid transparent;
+}
+
+.footlinks li:hover {
+  border-bottom: 1px solid #ff8800;
+  color: #ff8800;
+}
+
+.footlinks a {
+  text-decoration: none;
+}
+
+/* icon colors */
+.bi-github {
+  color: #fff;
+}
+
+.bi-linkedin {
+  color: #0a66c2;
+}
+
+.bi-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bi-spotify {
+  color: #1db954;
 }
