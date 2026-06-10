@@ -12,133 +12,111 @@ body {
   background-color: #232323;
   text-align: center;
   color: #fff;
-  padding: 7vh 5vw 0vh 5vw;
-  width: 60vw;
+  padding: 5vh 0 0 0;
+  width: 100%;
+  max-width: 60vw;
   justify-self: center;
-}
-
-a:hover {
-  transition-duration: 0.5s;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
   justify-content: center;
   align-items: center;
+  padding: 10px 0px 10px 0px;
 }
 
-.row {
-  justify-content: center;
-  align-items: center;
-  /* Add position relative to contain absolute positioning */
-  position: relative;
-}
-
-.row .row a {
-  text-decoration: none;
-  align-self: center;
-}
-
-.col-sm-1 a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.col-sm-1 a:hover {
+.container a{
   text-decoration: none;
   color: #ff8800;
+  padding: 0px;
 }
 
-#github2,
-#linkedin2,
-#email2,
-#resume2 {
-  display: none;
-}
-
-#github:hover ~ .row #github2,
-#linkedin:hover ~ .row #linkedin2,
-#email:hover ~ .row #email2,
-#resume:hover ~ .row #resume2,
-#github2:hover,
-#linkedin2:hover,
-#email2:hover,
-#resume2:hover {
-  display: block;
-  height: 25px;
-  width: fit-content;
-  background-color: white;
-  color: #0077ff;
-  overflow: hidden;
-  position: absolute;
-  top: 0px;
-  z-index: 10;
+.container a:hover{
+  color: #d3d3ff;
+  transition-duration: 0.3s;
 }
 
 .portrait {
   height: auto;
-  max-width: 250px;
+  max-width: 350px;
   border: 2px solid white;
   margin: 25px;
 }
 
-.name {
-  font-size: 48px;
-  padding: 0px;
-  margin-bottom: 20px;
+.landscape {
+  height: auto;
+  max-width: 500px;
+  border: 2px solid white;
+  margin: 20px 40px 20px 0px;
 }
 
-.description {
+/* about section specific */
+.heading{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: center;
+}
+
+.heading2{
   font-size: 24px;
-  color: #919191;
-  margin-bottom: 30px;
-}
-
-.bi {
-  font-size: 24px;
-}
-
-.page a {
-  font-size: 24px;
-  text-decoration: none;
-  color: #ff8800;
-}
-
-.page a:hover {
-  color: #0077ff;
-}
-
-.copy {
-  font-size: small;
+  padding-left: 40px;
+  color:#ff8800
 }
 
 .bio {
-  max-width: 500px;
-  font-size: 18px;
+  max-width: 580px;
+  font-size: 16px;
   text-align: left;
-  margin: 25px 0;
+  margin: 14px 0;
 }
 
-.bio a {
-  text-decoration: none;
-  color: #ff8800;
-  padding: 0px;
+/* experience section specifics */
+.section{
+  text-align: left;
+  width: 580px;
+  padding: 16px 0px;
 }
 
-.bio a:hover {
-  color: #0077ff;
-  transition-duration: 0.5s;
+.section a{
+  text-decoration: underline;
 }
 
-.nav a {
-  text-decoration: none;
-  font-size: 22px;
-  color: #ff8800;
+.section-header{
+  font-size: 18px;
+  font-weight: bold;
+  color:#ff8800;
+  margin-bottom: 8px;
 }
 
-.nav a:hover {
-  color: #0077ff;
-  transition-duration: 0.3s;
+.position{
+  font-size: 14px;
+  color:#FFC480;
+  padding: 2px 0px;
+  margin: 0px;
+  font-weight: bold;
+}
+
+.position a{
+  font-size: 14px;
+  color:#FFC480;
+  padding: 2px 0px;
+  margin: 0px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 13px;
+  padding: 0px 0px 16px 0px;
+  margin: 0px;
+}
+
+.description a{
+  color: #ffffff;
 }
 
 /* header/navbar styling */
@@ -244,4 +222,30 @@ a:hover {
 
 .bi-spotify {
   color: #1db954;
+}
+
+@media (max-width: 768px) {
+    body {
+        width: 90vw;
+        padding: 3vh 0 0 0;
+    }
+
+    .heading {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .heading2 {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .portrait {
+        max-width: 180px;
+        margin: 16px;
+    }
+
+    .bio {
+        font-size: 14px;
+    }
 }
