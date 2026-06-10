@@ -43,6 +43,7 @@ body {
 .portrait {
   height: auto;
   max-width: 350px;
+  width: 100%;
   border: 2px solid white;
   margin: 25px;
 }
@@ -50,8 +51,9 @@ body {
 .landscape {
   height: auto;
   max-width: 500px;
+  width: 100%;
   border: 2px solid white;
-  margin: 20px 40px 20px 0px;
+  margin: 20px 20px 20px 20px;
 }
 
 /* about section specific */
@@ -70,6 +72,7 @@ body {
 
 .bio {
   max-width: 580px;
+  width: 100%;
   font-size: 16px;
   text-align: left;
   margin: 14px 0;
@@ -78,7 +81,8 @@ body {
 /* experience section specifics */
 .section{
   text-align: left;
-  width: 580px;
+  max-width: 580px;
+  width: 100%;
   padding: 16px 0px;
 }
 
@@ -162,7 +166,7 @@ body {
 }
 
 .nav-bar li:last-child {
-  margin-top: 6 px;
+  margin-top: 6px;
 }
 
 .bi-file-earmark-person {
@@ -174,6 +178,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 10px 0px 30px 0px;
 }
 
@@ -225,27 +230,47 @@ body {
 }
 
 @media (max-width: 768px) {
-    body {
-        width: 90vw;
-        padding: 3vh 0 0 0;
-    }
+      body {
+    width: 92%;
+    padding: 3vh 0 0 0;
+  }
 
-    .heading {
-        flex-direction: column;
-        align-items: center;
-    }
+  .heading {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .heading2 {
-        padding-left: 0;
-        text-align: center;
-    }
+  .heading2 {
+    font-size: 20px;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 8px;
+  }
 
-    .portrait {
-        max-width: 180px;
-        margin: 16px;
-    }
+  .portrait {
+    max-width: 200px;
+    margin: 16px auto;
+  }
 
-    .bio {
-        font-size: 14px;
-    }
+  .bio {
+    font-size: 14px;
+  }
+
+  .section-header {
+    font-size: 16px;
+  }
+
+  .home {
+    font-size: 18px;
+  }
+
+  .nav-bar a {
+    font-size: 13px;
+  }
+
+  .footer {
+    flex-direction: column;   /* stack copyright + links vertically */
+    align-items: center;
+    text-align: center;
+  }
 }
